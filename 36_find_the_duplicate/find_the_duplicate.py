@@ -13,3 +13,15 @@ def find_the_duplicate(nums):
         >>> find_the_duplicate([2, 1, 3, 4]) is None
         True
     """
+    
+    for num in nums:
+        if nums.count(num) > 1:  # returns times occurs in str; works for lists ig?
+            return num
+
+############ ALTERNATE SOLUTION ##############################
+    # seen = set()
+
+    # for num in nums:
+    #     if num in seen:
+    #         return num
+    #     seen.add(num)

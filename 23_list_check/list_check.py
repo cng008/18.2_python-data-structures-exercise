@@ -7,3 +7,11 @@ def list_check(lst):
         >>> list_check([[1], "nope"])
         False
     """
+    return all(isinstance(item, list) for item in lst)
+
+############ ALTERNATE SOLUTION ##############################
+    # for item in lst:
+    #     if not isinstance(item, list):
+    #         return False
+
+    # return True

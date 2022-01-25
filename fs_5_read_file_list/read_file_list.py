@@ -19,3 +19,11 @@ def read_file_list(filename):
     # hint: when you read lines of files, there will be a "newline"
     # (end-of-line character) at the end of each line, and you want to
     # strip that off before you print it. Do some research on that!
+
+    with open(filename) as file:
+        for line in file:
+            line = line.strip() #remove whitepace at start/end of line
+            print(f"- {line}")
+
+    # with statement in Python is used in exception handling to make the code cleaner and much more readable
+    # there is no need to call file.close() when using with statement
